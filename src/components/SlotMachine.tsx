@@ -28,7 +28,7 @@ const SlotMachine = () => {
 
   // Sound effects function
   const playSound = useCallback(
-    (type: any) => {
+    (type: string) => {
       if (isMuted) return;
 
       const audioContext = new (window.AudioContext ||
@@ -95,7 +95,7 @@ const SlotMachine = () => {
   );
 
   const checkWin = useCallback(
-    (currentReels: any) => {
+    (currentReels: string[]) => {
       const reelString = currentReels.join("");
 
       // Check for three of a kind
