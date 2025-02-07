@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -14,7 +14,7 @@ const SlotMachine = () => {
 
   const symbols = ["🍎", "🍊", "🍇", "🍋", "🍒", "7️⃣", "⭐"];
 
-  const winningCombinations = {
+  const winningCombinations: Record<string, number> = {
     "7️⃣7️⃣7️⃣": 1000,
     "⭐⭐⭐": 500,
     "🍒🍒🍒": 300,
